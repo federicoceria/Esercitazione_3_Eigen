@@ -20,6 +20,7 @@ if (A.determinant() != 0) {
 else {
 	// uso fullPivLu per avere maggiore robustezza
 	sol = A.fullPivLu().solve(b);
+	err = ((c - sol).norm()) / (c.norm());
 }
 }
 
